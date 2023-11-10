@@ -1,0 +1,50 @@
+﻿@model List<GoodsDonation>
+
+@{
+    ViewData["Title"] = "All Disasters";
+}
+
+<h4 id="container_header">All Active Disasters</h4>
+<hr />
+
+@if (Model.Any())
+{
+    <table id="table">
+        <thead>
+            <tr id="table-header">
+            
+                <th id="col col-2">Description</th>
+                <th id="col col-3">Number of Items</th>
+                <th id="col col-4">Donation Date</th>
+                <th id="col col-5">Donor</th>
+          
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var disaster in Model)
+            {
+                <tr id="table-row">
+                
+                    <td id="col col-2">@disaster.Description</td>
+                    <td id="col col-3">@disaster.NumItems</td>
+                    <td id="col col-4">@disaster.GDate</td>
+                    <td id="col col-5">@disaster.GDonorName</td>
+                  
+                 
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+else
+{
+    <p>No disasters found.</p>
+}
+<hr />
+@* <td>
+    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+</td> *@

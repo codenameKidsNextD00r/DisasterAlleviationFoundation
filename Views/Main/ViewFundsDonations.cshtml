@@ -1,0 +1,48 @@
+﻿@model List<FundDonation>
+
+@{
+    ViewData["Title"] = "All Monetary Donation";
+}
+
+<h4 id="container_header">All Monetary Donation</h4>
+<hr />
+
+@if (Model.Any())
+{
+    <table id="table">
+        <thead>
+            <tr id="table-header">
+
+                <th id="col col-2">Amount</th>
+                <th id="col col-2">Donation Date</th>
+                <th id="col col-2">Donor</th>
+            
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var funds in Model)
+            {
+                <tr id="table-row">
+
+                    <td id="col col-2">@funds.Amount</td>
+                    <td id="col col-2">@funds.FDate</td>
+                    <td id="col col-2">@funds.FDonorName</td>
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+else
+{
+    <p>No monetary donation.</p>
+}
+<hr />
+@* <td>
+    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+</td> *@

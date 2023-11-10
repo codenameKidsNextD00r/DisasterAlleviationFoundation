@@ -1,0 +1,42 @@
+﻿@model Disaster
+
+
+
+
+<h4 id="container_header">Record Disaster</h4>
+<hr />
+
+<div id="card">
+
+    <form asp-action="AllocateFund">
+        <div asp-validation-summary="ModelOnly" id="text_danger"></div>
+
+
+        <label asp-for="Description" id="label"></label>
+        <input asp-for="Description" id="text_field" disabled />
+
+
+        <label asp-for="Location" id="label"></label>
+        <input asp-for="Location" id="text_field" disabled />
+
+
+
+
+        <label asp-for="AidType" id="label"></label>
+        <input asp-for="AidType" id="text_field" disabled />
+
+
+        <label asp-for="Amount" id="label">Donation Amount</label>
+        <input asp-for="Amount" id="text_field" />
+        <span asp-validation-for="Amount" id="text_danger"></span>
+
+        <div class="form-group">
+            <input type="submit" value="Allocate Goods" id="login_button" />
+        </div>
+    </form>
+</div>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

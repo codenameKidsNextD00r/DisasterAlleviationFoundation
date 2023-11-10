@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css?family=Secular One');
+@import url('https://fonts.googleapis.com/css?family=Graduate');
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+    position: relative;
+  
+}
+
+body {
+    font-family: 'Secular One';
+    background-color: #8B1874;
+    height:10px;
+
+}
+#container_header {
+    font-size: 64px;
+    text-align: center;
+    font-family: 'Graduate';
+     text-shadow: -2px 0 black, 0 3px black, 3px 0 black, 0 -2px black;
+}
+
+#login_container {
+    color: #B71375;
+    text-align: center;
+    width: auto;
+   
+    background-color: #FC4F00;
+    margin:10%;
+    border-radius: 25px;
+    border: 10px solid #F79540;
+}
+#card {
+    color: #B71375;
+    text-align: center;
+    width: auto;
+    background-color: #FC4F00;
+    margin: 10%;
+    border-radius: 25px;
+    border: 10px solid #F79540;
+}
+#label {
+    display: block;
+
+
+
+    font-size: 30px;
+}
+#text_field {
+    display: inline-block;
+
+    border-radius: 25px;
+    border: none;
+    width: 75%;
+ 
+    font-size: 30px;
+}
+#text_danger {
+    display: block;
+    color: whitesmoke;
+}
+#login_button {
+    background-color: #8B1874;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #F79540;
+    margin: 20px 0px;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    font-size: 22px;
+}
+    #login_button:hover {
+
+        background-color: #F79540;
+        color: #8B1874;
+        border: solid #8B1874;
+    }
+#menu_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+  
+}
+ul {
+    position: relative;
+}
+
+    ul li {
+        list-style: none;
+        text-align: center;
+    }
+
+        ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 3em;
+            padding: 5px 20px;
+            display: inline-flex;
+            font-weight: 700;
+            transition: 0.5s;
+          
+        }
+
+    ul:hover li a {
+        color: #0002;
+        font-family: 'Secular One';
+    }
+
+    ul li:hover a {
+        color: #000;
+        background: transparent;
+    }
+
+    ul li a:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5em;
+        color: #FC4F00;
+        z-index: -1;
+        opacity: 0;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 500px;
+        transition: letter-spacing 0.5s, left 0.5s;
+    }
+
+    ul li a:hover:before {
+        content: attr(data-text);
+        opacity: 1;
+        left: 50%;
+        letter-spacing: 5px;
+        width: 1100px;
+        height: 3000px;
+        background: #8B1874;
+        font-family: 'Graduate';
+    }
+
+#col-1 {
+    flex-basis: 10%;
+}
+
+#col-2 {
+    flex-basis: 25%;
+}
+
+#col-3 {
+    flex-basis: 20%;
+}
+
+#col-4 {
+    flex-basis: 20%;
+}
+
+#col-5 {
+    flex-basis: 17.5%;
+}
+#col-6 {
+    flex-basis: 117.5%;
+}
+
+
+tr{
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+#table-header {
+    font-family: 'Graduate';
+    background-color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+#table-row {
+    font-family: 'Secular One';
+    font-size: 20px;
+    text-align: center;
+    width: auto;
+    background-color: #FC4F00;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+}
+#table {
+    width: 100%;
+    margin:5% 0% 10% 0%;
+}

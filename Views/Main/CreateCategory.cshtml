@@ -1,0 +1,26 @@
+﻿@model DisasterAlleviationFoundationWebApp.Entity.Category
+
+<h4 id="container_header">Create New Category</h4>
+
+<hr />
+    <div id="card">
+
+    <form asp-action="AddCategory">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label" id="label" >Category Name</label>
+                <input asp-for="Name" class="form-control" id="text_field"/>
+                <span asp-validation-for="Name" class="text-danger" id="text_danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create Category" class="btn btn-primary" id="login_button"/>
+            </div>
+        </form>
+    </div>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

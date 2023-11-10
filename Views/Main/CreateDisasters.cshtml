@@ -1,0 +1,40 @@
+﻿@model DisasterAlleviationFoundationWebApp.Entity.Disaster
+
+<h4 id="container_header">Record Disaster</h4>
+<hr />
+
+    <div id="card">
+
+    <form asp-action="AddDisaster">
+            <div asp-validation-summary="ModelOnly" id="text_danger"></div>
+           
+                <label asp-for="StartDate" id="label"></label>
+                <input asp-for="StartDate" id="text_field" />
+                <span asp-validation-for="StartDate" id="text_danger"></span>
+        
+                <label asp-for="EndDate" id="label"></label>
+                <input asp-for="EndDate"id="text_field"  />
+                <span asp-validation-for="EndDate" id="text_danger"></span>
+           
+                <label asp-for="Location" id="label"></label>
+                <input asp-for="Location"id="text_field"  />
+                <span asp-validation-for="Location" id="text_danger"></span>
+            
+                <label asp-for="Description" id="label"></label>
+                <input asp-for="Description"id="text_field"  />
+                <span asp-validation-for="Description" id="text_danger"></span>
+         
+                <label asp-for="AidType" id="label"></label>
+                <input asp-for="AidType"id="text_field"  />
+                <span asp-validation-for="AidType" id="text_danger"></span>
+       
+                <input type="submit" value="Create" id="login_button" />
+           
+        </form>
+    </div>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

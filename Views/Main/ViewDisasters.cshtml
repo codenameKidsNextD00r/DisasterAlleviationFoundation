@@ -1,0 +1,58 @@
+﻿@model List<Disaster>
+
+@{
+    ViewData["Title"] = "All Disasters";
+}
+
+<h4 id="container_header">All Active Disasters</h4>
+<hr />
+
+@if (Model.Any())
+{
+    <table id="table">
+        <thead >
+            <tr id="table-header">
+                <th id="col col-1">ID</th>
+                <th id="col col-1">Description</th>
+                <th id="col col-1">Location</th>
+                <th id="col col-1">Aid Type</th>
+                <th id="col col-1">Strat Date</th>
+                <th id="col col-1">End Date</th>
+                <th id="col col-1">Funds Allocated</th>
+                <th id="col col-1">Number of Goods Allocated</th>
+                <th id="col col-1">Allocate Funds</th>
+                <th id="col col-1">Allocate Goods</th>
+                                1
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var disaster in Model)
+            {
+                <tr id="table-row">
+                    <td id="col col-1">@disaster.id</td>
+                    <td id="col col-1">@disaster.Description</td>
+                    <td id="col col-1">@disaster.Location</td>
+                    <td id="col col-1">@disaster.AidType</td>
+                    <td id="col col-1">@disaster.StartDate</td>
+                    <td id="col col-1">@disaster.EndDate</td>
+                    <td id="col col-1">R @disaster.Amount</td>
+                    <td id="col col-1">@disaster.NumItems @disaster.GoodsDescription</td>
+                    <td id="col col-1"><a asp-action="AllocateDisasterFund" asp-route-id="@disaster.id">Allocate Funds</a></td>
+                    <td id="col col-1"><a asp-action="AllocateDisasterGoods" asp-route-id="@disaster.id">Allocate Goods</a></td>
+                  
+                </tr>
+            }
+        </tbody>
+    </table>
+    
+}
+else
+{
+    <p>No disasters found.</p>
+}
+<hr />
+@* <td>
+    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+</td> *@
