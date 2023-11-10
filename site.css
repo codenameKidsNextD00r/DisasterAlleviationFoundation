@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Arial');
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+}
+
+#container_header {
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    text-shadow: -2px 0 black, 0 3px black, 3px 0 black, 0 -2px black;
+}
+
+#login_container,
+#card {
+    color: #8B1874;
+    text-align: center;
+    width: auto;
+    background-color: white;
+    margin: 10%;
+    border-radius: 10px;
+    border: 2px solid #8B1874;
+}
+
+#label,
+#text_field,
+#text_danger {
+    display: block;
+    font-size: 1em;
+}
+
+#text_field {
+    display: inline-block;
+    border-radius: 10px;
+    border: none;
+    width: 75%;
+    font-size: 1em;
+}
+
+#text_danger {
+    display: block;
+    color: black;
+}
+
+#login_button {
+    background-color: #8B1874;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    margin: 20px 0px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+}
+
+    #login_button:hover {
+        background-color: #F79540;
+        color: white;
+        border: solid #8B1874;
+    }
+
+#menu_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+ul {
+    position: relative;
+}
+
+    ul li {
+        list-style: none;
+        text-align: center;
+    }
+
+        ul li a {
+            color: #8B1874;
+            text-decoration: none;
+            font-size: 1.5em;
+            padding: 5px 20px;
+            display: inline-flex;
+            font-weight: 700;
+            transition: 0.5s;
+        }
+
+    ul:hover li a {
+        color: #0002;
+    }
+
+    ul li:hover a {
+        color: #000;
+        background: transparent;
+    }
+
+    ul li a:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5em;
+        color: #FC4F00;
+        z-index: -1;
+        opacity: 0;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 500px;
+        transition: letter-spacing 0.5s, left 0.5s;
+    }
+
+    ul li a:hover:before {
+        content: attr(data-text);
+        opacity: 1;
+        left: 50%;
+        letter-spacing: 5px;
+        width: 1100px;
+        height: 3000px;
+        background: #8B1874;
+        font-family: 'Arial', sans-serif;
+    }
+
+#col-1,
+#col-2,
+#col-3,
+#col-4,
+#col-5,
+#col-6 {
+    flex-basis: 20%;
+}
+
+tr {
+    border-radius: 3px;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+#table-header {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+#table-row {
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;
+    text-align: center;
+    width: auto;
+    background-color: #8B1874;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+#table {
+    width: 100%;
+    margin: 5% 0% 10% 0%;
+}
